@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+     <!-- Libraries -->
+    <script src="angular.min.js"></script>
+    <!-- Development -->
+    <script src="app.js"></script>
+    <title>ANGULAR</title>
+  </head>
+  <body>
+  <div ng-controller="MainController">
+    <input type="text" ng-model="toDo" ng-value="toDo"/>
+    <button ng-click="runClick(toDo)">CLICK</button>
+
+    <div ng-repeat="toDo in toDoList">
+      <button ng-click="removeItem()">REMOVE</button>
+      {{toDo}}
+      <!-- <input type="checkbox" ng-model="toDo" ng-value=/> -->
+
+
+    </div>
+
+
+  </div>
+  </body>
+</html>
